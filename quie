@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+
+int array[5];
+int top = 0;
+
+void display() {
+    cout << "======================\n";
+    if (top == 0) {
+        cout << " Stack is empty\n";
+    } else {
+        cout << " Top -> ";
+        for (int i = top - 1; i >= 0; i--) {
+            cout << "|" << array[i] << "| ";
+        }
+        cout << endl;
+    }
+}
+
+void push() {
+    int element;
+    cout << "Enter value you want to push on the stack = ";
+    cin >> element;
+    if (top < 5) {
+        array[top] = element;
+        top++;
+        display();
+    } else {
+        cout << " Stack overflow\n";
+    }
+}
+
+void pop() {
+    if (top == 0) {
+        cout << " Stack is underflow\n";
+    } else {
+        top--;
+        cout << array[top] << " removed from the top of the stack\n";
+        display();
+    }
+}
+
+bool isFull() {
+    if (top == 5) {
+        cout << "Stack is full\n";
+        return true;
+    } else {
+        cout << "Stack is not full\n";
+        return false;
+    }
+}
+
+bool isEmpty() {
+    if (top == 0) {
+        cout << "Stack is empty\n";
+        return true;
+    } else {
+        cout << "Stack is not empty\n";
+        return false;
+    }
+}
+
+int main() {
+    while (1) {
+        cout << "Stack operation menu driven \n";
+        cout << "Press 1 to push element to the top of the stack\n";
+        cout << "Press 2 to display the elements of the stack\n";
+        cout << "Press 3 to pop element from the top of the stack\n";
+        cout << "Press 4 to check if the stack is full\n";
+        cout << "Press 5 to check if the stack is empty\n";
+        int ch;
+        cout << "Enter your choice now = ";
+        cin >> ch;
+        switch (ch) {
+            case 1: push(); break;
+            case 2: display(); break;
+            case 3: pop(); break;
+            case 4: isFull(); break;
+            case 5: isEmpty(); break;
+            default: cout << "Invalid choice\n";
+        }
+    }
+    return 0;
+}
