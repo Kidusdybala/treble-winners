@@ -1,0 +1,157 @@
+html{
+    height: 100%;
+}.register-box .user-box {
+    position: relative;
+  }
+  
+  .register-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #beb3a3;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .register-box .user-box label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #003459;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .register-box .user-box input:focus ~ label,
+  .register-box .user-box input:valid ~ label {
+    top: -40px;
+    font-size: 16px;
+    color: #003459;
+  }
+body {
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+     background: linear-gradient(#2a2a2a, #7b6850);
+  }
+  .register-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  .register-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+  }
+  .register-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #beb3a3;
+  outline: none;
+  background: transparent;
+  }
+  
+  .register-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 0;
+    font-size: 16px;
+    color: #2a2a2a;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .register-box .user-box input:focus ~ label,
+  .register-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0%;
+    font-size: 12px;
+    color: #d3d007; 
+  }
+  .register-box form{
+    display: flex;
+    flex-direction: column;
+  } 
+  .register-box form .submit-btn{
+    margin-right: auto;
+    order: 1;
+  }
+.register-box form a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #bebebe;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+  .register-box a:hover{
+    background: #beb3a3;
+      color: rgb(108, 69, 17); 
+      cursor: pointer; 
+    }
+    
+    border-radius: 5px;
+    box-shadow: 0 0 5px #7b6850, 0 0 25px #2a2a2a, 0 0 #ffffff, 0 0 #9d9976;
+  }
+  .register-box a span{
+    position: absolute;
+    display: block;
+  }
+.register-box a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #beb3a3);
+    animation: btn-anim1 is linear infinite;
+}
+@keyframes btn anim1 {
+    0%{
+        :left: -100%;
+    }50%,
+    100%{
+    left: 100%;
+    }
+   
+}
+.register-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #544a3a);
+    animation: btn-anim2 1s linear infinite;
+  .submit-btn:hover {
+    background-color: #312353; 
